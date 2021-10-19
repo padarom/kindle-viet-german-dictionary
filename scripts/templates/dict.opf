@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier id="uuid_id">https://github.com/padarom/kindle-viet-german-dictionary#{{language}}{{output}}</dc:identifier>
+        <dc:title>{{title}}</dc:title>
+        <dc:creator opf:file-as="Mühl, Christopher" opf:role="aut">Christopher Mühl</dc:creator>
+        <dc:language>{{language}}</dc:language>
+        <x-metadata>
+            <DictionaryInLanguage>{{language}}</DictionaryInLanguage>
+            <DictionaryOutLanguage>{{output}}</DictionaryOutLanguage>
+            <DefaultLookupIndex>default</DefaultLookupIndex>
+        </x-metadata>
+    </metadata>
+    <manifest>
+        <item id="cover"
+              href="cover.html"
+              media-type="application/xhtml+xml" />
+        <item id="copyright"
+              href="copyright.html"
+              media-type="application/xhtml+xml" />
+        <item id="content"
+              href="content.html"
+              media-type="application/xhtml+xml" />
+    </manifest>
+    <spine>
+        <itemref idref="cover" />
+        <itemref idref="copyright"/>
+        <itemref idref="content"/>
+    </spine>
+    <guide>
+        <reference type="index" title="IndexName" href="content.html"/>
+    </guide>
+</package>

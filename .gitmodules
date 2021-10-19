@@ -1,0 +1,3 @@
+[submodule "scripts/sdunpack"]
+	path = scripts/sdunpack
+	url = https://github.com/baskerville/sdunpack

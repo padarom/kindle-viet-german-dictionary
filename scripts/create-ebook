@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+if [ -f "$1" ]; then
+  DIR=$(dirname "${1}")
+  if [ "$DIR" == "." ]; then
+    DIR=$(pwd)
+  fi
+  FN=${1##*/}
+  EXT=${1##*\.}
+  CVT_EXT=${2:-mobi}
+  BOOK_NAME=${FN%.*}; docker run --rm -it -v "$DIR:/target" rappdw/ebook-convert "$BOOK_NAME.$EXT" "$BOOK_NAME.$CVT_EXT"
+else
+  echo "$1 does not exist. Please specify a valid file"
+fi
